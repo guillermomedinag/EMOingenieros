@@ -20,11 +20,11 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center space-x-2">
             <img 
-              src="/iconoemo.png" 
-              alt="EMO Ingenieros Logo" 
+              src="/icon.png" 
+              alt="EMO Icon" 
               className="h-8 w-auto"
             />
-            <h1 className="text-2xl font-bold flex items-center">
+            <h1 className="text-2xl font-bold">
               <span className="text-emo-blue">EMO</span>
               <span className={`${isScrolled ? 'text-emo-orange' : 'text-white'}`}>Ingenieros</span>
             </h1>

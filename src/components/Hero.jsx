@@ -70,13 +70,17 @@ const Hero = () => {
       <div className="relative z-10 h-full bg-black bg-opacity-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-white max-w-3xl">
-            <div className="mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 flex items-center gap-4">
               <img 
-                src="/LOGOEMO.png" 
-                alt="EMO Ingenieros Logo" 
-                className="w-auto h-24 sm:h-32 md:h-40 object-contain"
+                src="/icon.png" 
+                alt="EMO Icon" 
+                className="h-18 sm:h-24 md:h-30 w-auto"
               />
-            </div>
+              <div>
+                <span className="block text-emo-blue">EMO</span>
+                <span className="block text-emo-orange">Ingenieros</span>
+              </div>
+            </h2>
             <p className="mt-3 text-xl sm:text-2xl text-gray-100 mb-8">
               Expertos en estudios hidrológicos, hidráulicos, topografía y aerofotogrametría. 
               Transformamos desafíos en soluciones precisas y sostenibles.
