@@ -1,22 +1,33 @@
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault()
+    const target = document.getElementById(targetId)
+    const navbarHeight = 64 // altura del navbar en píxeles
+    if (target) {
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      })
+    }
+  }
+
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-black" id="contacto">
       <div className="max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:pt-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
           {/* Logo y descripción */}
           <div className="space-y-6">
-            <h3 className="text-3xl font-bold flex items-center space-x-2">
-              <img 
-                src="/icon.png" 
-                alt="EMO Icon" 
-                className="h-8 w-auto"
-              />
-              <div>
-                <span className="text-emo-blue">EMO</span>
-                <span className="text-emo-orange">Ingenieros</span>
+            <h3 className="flex flex-col">
+              <div className="flex items-baseline">
+                <span className="text-3xl logo-emo text-emo-blue">EMO</span>
+                <span className="text-xl logo-ingenieros text-emo-orange underline">INGENIEROS</span>
               </div>
+              <span className="logo-subtitle text-emo-light-blue text-sm mt-2 uppercase">
+                Hidráulica · Hidrología · Aerofotografía · Topografía
+              </span>
             </h3>
             <p className="text-gray-300 max-w-md">
               Soluciones de ingeniería innovadoras y sostenibles para los desafíos más complejos. Comprometidos con la excelencia y la precisión en cada proyecto.
@@ -68,22 +79,38 @@ const Footer = () => {
             <h3 className="text-white text-lg font-semibold mb-6">Enlaces Rápidos</h3>
             <ul className="space-y-4">
               <li>
-                <a href="#inicio" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <a 
+                  href="#inicio" 
+                  onClick={(e) => handleNavClick(e, 'inicio')}
+                  className="text-gray-300 hover:text-white transition-colors duration-300"
+                >
                   Inicio
                 </a>
               </li>
               <li>
-                <a href="#servicios" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <a 
+                  href="#servicios" 
+                  onClick={(e) => handleNavClick(e, 'servicios')}
+                  className="text-gray-300 hover:text-white transition-colors duration-300"
+                >
                   Servicios
                 </a>
               </li>
               <li>
-                <a href="#nosotros" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <a 
+                  href="#nosotros" 
+                  onClick={(e) => handleNavClick(e, 'nosotros')}
+                  className="text-gray-300 hover:text-white transition-colors duration-300"
+                >
                   Nosotros
                 </a>
               </li>
               <li>
-                <a href="#proyectos" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <a 
+                  href="#proyectos" 
+                  onClick={(e) => handleNavClick(e, 'proyectos')}
+                  className="text-gray-300 hover:text-white transition-colors duration-300"
+                >
                   Proyectos
                 </a>
               </li>

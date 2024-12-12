@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -28,19 +28,23 @@
 }
 
 .logo-emo {
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 0.2em;
-  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0;
+  font-weight: 600;
+  margin-right: -0.12em;
 }
 
 .logo-ingenieros {
-  font-family: 'Oswald', sans-serif;
-  letter-spacing: 0.1em;
-  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin-left: -0.12em;
 }
 
 .logo-subtitle {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.1em;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  font-size: 0.95em;
+  margin-top: 0.5em;
 }

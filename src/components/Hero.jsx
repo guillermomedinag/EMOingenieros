@@ -35,7 +35,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <div className="relative w-full min-h-screen"> {/* Removido h-[calc(100vh-4rem)] para mejor manejo de altura */}
+    <div id="inicio" className="relative w-full min-h-screen">
       {/* Slider */}
       <div className="absolute inset-0 w-full h-full">
         {slides.map((slide, index) => (
@@ -69,19 +69,24 @@ const Hero = () => {
       {/* Overlay con contenido */}
       <div className="relative z-10 h-full bg-black bg-opacity-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-          <div className="text-white max-w-3xl mt-24 sm:mt-28 md:mt-32"> {/* Ajustado el margen superior */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 flex flex-col sm:flex-row items-start sm:items-center gap-6"> {/* Aumentado gap y mb */}
+          <div className="text-white max-w-3xl mt-24 sm:mt-28 md:mt-32">
+            <h2 className="tracking-tight mb-2 flex flex-col sm:flex-row items-start sm:items-center gap-6">
               <img 
                 src="/icon.png" 
                 alt="EMO Icon" 
-                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain transform hover:scale-105 transition-transform duration-300" /* Añadido efecto hover */
+                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain transform hover:scale-105 transition-transform duration-300"
               />
-              <div className="flex flex-col gap-1"> {/* Ajustado el espaciado entre EMO e Ingenieros */}
-                <span className="block text-emo-blue">EMO</span>
-                <span className="block text-emo-orange">Ingenieros</span>
+              <div className="flex flex-col">
+                <div className="flex items-baseline whitespace-nowrap">
+                  <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-emo-blue logo-emo">EMO</span>
+                  <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-emo-orange logo-ingenieros">Ingenieros</span>
+                </div>
+                <span className="logo-subtitle text-emo-light-blue text-sm sm:text-base md:text-lg uppercase tracking-wider">
+                  Hidráulica · Hidrología · Aerofotografía · Topografía
+                </span>
               </div>
             </h2>
-            <p className="mt-6 text-lg sm:text-xl md:text-2xl text-gray-100 mb-10 max-w-2xl"> {/* Ajustados los márgenes */}
+            <p className="mt-8 text-lg sm:text-xl md:text-2xl text-gray-100 mb-10 max-w-2xl">
               Expertos en estudios hidrológicos, hidráulicos, topografía y aerofotogrametría. 
               Transformamos desafíos en soluciones precisas y sostenibles.
             </p>
@@ -104,7 +109,7 @@ const Hero = () => {
       </div>
 
       {/* Indicadores de slides */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3"> {/* Ajustado espaciado */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
